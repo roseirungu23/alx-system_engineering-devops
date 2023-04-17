@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lt --group-directories-first | grep -v '^d' | head -n 11 | cut -d ' ' -f 9-
+find /0x02-shell_redirections -type f -printf "%t - %p\n" | sort -n | tail -1
