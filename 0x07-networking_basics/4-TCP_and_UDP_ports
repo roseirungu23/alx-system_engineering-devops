@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Check if the script is run as root
+if [ "$(id -u)" != "0" ]; then
+    echo "Please run this script as root."
+    exit 1
+fi
+
+# Display listening ports with PID and program name using lsof
+lsof -i -n -P | awk '$1 == "LISTEN" {print "Port:", $9, "PID:", $2, "Program:", $1}'
