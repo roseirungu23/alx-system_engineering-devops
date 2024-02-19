@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
-# Script that configures a server to the above requirements
+# Script that configures a server on port 80
 
-# Update Nginx configuration to listen on port 80
 sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
-# Restart Nginx
 sudo service nginx restart
